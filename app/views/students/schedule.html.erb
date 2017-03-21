@@ -1,0 +1,18 @@
+<span id="name">Logged in as: <%= @student.first_name%> <%=@student.middle_name%> <%=@student.last_name%>, Year <%=@student.year_level%></span>
+<div id="form">	
+	<a href="/students/home" class="menuitem">HOME</a>
+	<a href="/students/grades" class="menuitem">GRADES</a>
+	<a href="/students/schedule" class="menuitem">SCHEDULE</a>
+	<a href="/students/classmates" class="menuitem">CLASSMATES</a>
+	<%= link_to "Log Out", session_path("logout"), method: "delete" %>
+	<a href="/students/login"><img src="/img/out.png" id="logout"/></a>
+	<a href="/students/<%= @student.id%>"><img src="/img/profile.png" id="profile"/></a>
+</div>
+
+<p class="title">My Schedule</p>
+<% @studentgradesubjects.each do |sgs|%>
+	<% @subject = Subject.find_by(subject_title: sgs.subject_title) %>
+	<%= @subject.subject_title %><br>
+	<%= @subject.schedule %><br>
+	<%= Teacher.find_by(license_id: @subject.instructor).first_name %> <%= Teacher.find_by(license_id: @subject.instructor).middle_name %> <%= Teacher.find_by(license_id: @subject.instructor).last_name %><br><br>
+<% end %>

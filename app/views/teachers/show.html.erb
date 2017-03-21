@@ -1,0 +1,51 @@
+<body id="home">
+  <div id="wrapper">
+    <!-- insert the name of teacher here !-->
+    <span id="name">Logged in as: <%= @teacher.first_name%> <%=@teacher.middle_name%> <%=@teacher.last_name%> </span>
+    <div id="wrapper">
+      <div id="menu">
+        <img src="/assets/img/ncshs.gif" id="logo"/>
+      </div>
+      <div id="form2">
+          <a href="/teachers/home" class="menuitem">HOME</a>
+          <a href="grades.html" class="menuitem">GRADES</a>
+          <a href="schedule.html" class="menuitem">SCHEDULE</a>
+          <a href="curriculum.html" class="menuitem">CURRICULUM</a>
+          <a href="/teachers/login"><img src="/assets/img/out.png" id="logout"/></a>
+          <a href="/teachers/<%= @teacher.id%>"><img src="/assets/img/profile.png" id="profile"/></a>
+      </div>
+
+      <div id="content">
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>License:</strong>
+          <%= @teacher.license_id %>
+        </p>
+
+        <p>
+          <strong>First Name:</strong>
+          <%= @teacher.first_name %>
+        </p>
+
+        <p>
+          <strong>Middle Name:</strong>
+          <%= @teacher.middle_name %>
+        </p>
+
+        <p>
+          <strong>Last Name:</strong>
+          <%= @teacher.last_name %>
+        </p>
+
+        <p>
+          <strong>Contact Number:</strong>
+          <%= @teacher.contact_no %>
+        </p>
+
+        <!--<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+        <%= link_to 'Back', teachers_path %> !-->
+      </div>
+    </div>
+  </div>
+</body>

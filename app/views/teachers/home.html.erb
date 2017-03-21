@@ -1,0 +1,33 @@
+<body id="home">
+	<div id="wrapper">
+		<% teacher = @teachers.first %>
+		<!-- insert the name of teacher here !-->
+		<span id="name">Logged in as: <%= teacher.first_name%> <%=teacher.middle_name%> <%=teacher.last_name%> </span>
+		<div id="wrapper">
+			<div id="menu">
+				<img src="/assets/img/ncshs.gif" id="logo"/>
+			</div>
+			<div id="form2">
+					<a href="index.html" class="menuitem" id="current">HOME</a>
+					<a href="grades.html" class="menuitem">GRADES</a>
+					<a href="schedule.html" class="menuitem">SCHEDULE</a>
+					<a href="curriculum.html" class="menuitem">CURRICULUM</a>
+					<a href="/teachers/login"><img src="/assets/img/out.png" id="logout"/></a>
+					<a href="/teachers/<%= teacher.id%>"><img src="/assets/img/profile.png" id="profile"/></a>
+			</div>
+			
+			<div id="content">
+			<% @announcement = Announcement.all %>
+			<% @announcement.each do |a|%>
+				<p class="title">Announcement 1 </p>
+				<p class="headline"><%= a.title %><br><span class="date">March 7, 2017</span></p>
+				<p><%= a.content %></p>
+			<% end %>
+				<p class="headline">Announcement 2<br><span class="date">March 9, 2017</span></p>
+				<p>Pellentesque imperdiet magna vehicula sagittis volutpat. Nam pellentesque dapibus elit et congue. Maecenas ut varius nisi. Vivamus consectetur urna at augue laoreet fringilla. Integer egestas mauris ut condimentum efficitur. Pellentesque gravida non velit a auctor. Vivamus rutrum quam ut iaculis hendrerit. Vestibulum aliquam aliquam rutrum. Cras eu sapien et ipsum porta facilisis. Nulla a viverra massa. <a href="#">Continue reading...</a></p></p>
+				<p class="headline">Announcement 3<br><span class="date">March 11, 2017</span></p>
+				<p>Pellentesque imperdiet magna vehicula sagittis volutpat. Nam pellentesque dapibus elit et congue. Maecenas ut varius nisi. Vivamus consectetur urna at augue laoreet fringilla. Integer egestas mauris ut condimentum efficitur. Pellentesque gravida non velit a auctor. <a href="#">Continue reading...</a></p></p>
+			</div>
+		</div>
+	</div>
+</body>

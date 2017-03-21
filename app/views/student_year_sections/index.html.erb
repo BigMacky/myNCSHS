@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Student Year Sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student lrn</th>
+      <th>Year level</th>
+      <th>Section name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_year_sections.each do |student_year_section| %>
+      <tr>
+        <td><%= student_year_section.student_lrn %></td>
+        <td><%= student_year_section.year_level %></td>
+        <td><%= student_year_section.section_name %></td>
+        <td><%= link_to 'Show', student_year_section %></td>
+        <td><%= link_to 'Edit', edit_student_year_section_path(student_year_section) %></td>
+        <td><%= link_to 'Destroy', student_year_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student year section', new_student_year_section_path %>

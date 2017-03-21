@@ -1,0 +1,46 @@
+<style>
+	div#login
+	{
+		width: 50%;
+		margin:auto;
+		text-align:center;
+	}
+	
+	img#loginlogo
+	{
+		width: 150px;
+		height: auto;
+		margin-left:15px;
+	}
+	a#no:hover
+	{
+		background: none;
+	}
+
+</style>
+
+<div id="form">
+	<h1><h2>Welcome to myNCSHS</h2></h1>
+</div>
+
+<div id="login">
+	<% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+    
+  <%= form_for(:session, url: login_path) do |f| %>
+  <table>
+  	<tr>
+    	<td><span class = "logintxt">Student LRN</span>
+    	<td><%= f.text_field :student_lrn, class: 'form-control' %>
+    </tr>
+    <tr>
+    	<td><span class = "logintxt">Password</span>
+    	<td><%= f.password_field :password, class: 'form-control' %>
+    </tr>
+  </table>
+    <br>
+    <br>
+    <%= f.submit "Log in", class: "btn btn-primary" %>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+<span id="name">Logged in as: <%= @student.first_name%> <%=@student.middle_name%> <%=@student.last_name%>, Year <%=@student.year_level%></span>
+<div id="form">	
+	<a href="/students/home" class="menuitem">HOME</a>
+	<a href="/students/grades" class="menuitem">GRADES</a>
+	<a href="/students/schedule" class="menuitem">SCHEDULE</a>
+	<a href="/students/classmates" class="menuitem">CLASSMATES</a>
+	<%= link_to "Log Out", session_path("logout"), method: "delete" %>
+	<a href="/students/login"><img src="/img/out.png" id="logout"/></a>
+	<a href="/students/<%= @student.id%>"><img src="/img/profile.png" id="profile"/></a>
+</div>
+
+<p class="title">My Classmates</p>
+<h1> <%= @studentsection.section_name %> </h1>
+<table>
+<% @section.each do |s| %>
+	<% @stud = Student.find_by(student_lrn: s.student_lrn) %>
+	<tr>
+		<td><%= @stud.last_name %>, </td>
+		<td><%= @stud.first_name %> </td>
+		<td><%= @stud.middle_name %> </td>
+	</tr>
+<% end %>
+</table>

@@ -1,0 +1,157 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ html,body { height:100%; }
+
+body {
+    background-image:url("/img/blue.png");
+    background-repeat: no-repeat;
+    background-size: 9999999px 80px;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	min-width: 1024px;
+}
+
+div#wrapper
+{
+	position:relative;
+	width:800px;
+	margin:0 auto;
+}
+
+div#menu
+{
+	margin-top:5%;
+	background:url("/img/pink.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+	height: 80px;
+}
+
+h1#welcome
+{
+	font-family: cambria;
+	font-size: 2em;
+	margin-top: -50px;
+}
+
+img#logout
+{
+	width:30px;
+	height:auto;
+	margin-left:40px;
+	margin-top: -1%;
+	position:absolute;
+}
+
+img#profile
+{
+	width:30px;
+	height:auto;
+	margin-top: -1%;
+	position:absolute;
+	margin-left:5px;
+}
+
+img#idpic
+{
+	width: 80%;
+	height:auto;
+	padding: 0;
+}
+
+
+div#form
+{
+	position:relative;
+	margin-top: -18%;
+	margin-bottom: 13%;
+	font-size: 20px;
+	margin-left:23%;
+}
+
+div#content
+{
+	margin-top:5%;
+	background-color: #f9f8f9;
+	background-size: 100%;
+	padding: 50px 10px 10px 40px;
+	font-size: 12px;
+}
+input
+{
+	height: 15%;
+}
+
+a, a:hover
+{
+	text-decoration: none;
+}
+
+a.menuitem
+{
+	padding: 10px;
+	text-decoration:none;
+	color: #000;
+}
+
+a.menuitem:hover
+{
+	background-image: url("/img/blue.png");
+}
+
+
+a#current
+{
+	background-image: url("/img/blue.png");
+}
+
+p.title
+{
+	font-size: 30px;
+}
+
+p.headline
+{
+	font-size: 20px;
+}
+img#logo
+{
+	margin-top:-4%;
+	height:180px;
+	width:auto;
+}
+
+span#name
+{
+	position:absolute;
+	float: right;
+	margin-top: -20px;
+	margin-left:800px;
+}
+
+div#footer
+{
+	size:10%;
+	background: #fff;
+}
+
+span.date
+{
+	font-size: 12px;
+	margin-left: 20px;
+	font-style: italic;
+}

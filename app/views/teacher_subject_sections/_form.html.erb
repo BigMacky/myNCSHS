@@ -1,0 +1,29 @@
+<%= form_for(@teacher_subject_section) do |f| %>
+  <% if @teacher_subject_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@teacher_subject_section.errors.count, "error") %> prohibited this teacher_subject_section from being saved:</h2>
+
+      <ul>
+      <% @teacher_subject_section.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :teacher_id %><br>
+    <%= f.text_field :teacher_id %>
+  </div>
+  <div class="field">
+    <%= f.label :subject_title %><br>
+    <%= f.text_field :subject_title %>
+  </div>
+  <div class="field">
+    <%= f.label :section_name %><br>
+    <%= f.text_field :section_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

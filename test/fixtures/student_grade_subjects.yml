@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_lrn: MyString
+  subject_title: MyString
+  quarter: 1
+  grade: 9.99
+
+two:
+  student_lrn: MyString
+  subject_title: MyString
+  quarter: 1
+  grade: 9.99

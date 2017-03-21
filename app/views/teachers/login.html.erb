@@ -1,0 +1,43 @@
+<style>
+	div#login
+	{
+		width: 50%;
+		margin:auto;
+		text-align:center;
+	}
+	
+	img#loginlogo
+	{
+		width: 150px;
+		height: auto;
+		margin-left:15px;
+	}
+	a#no:hover
+	{
+		background: none;
+	}
+</style>
+
+<div id="wrapper">
+	<div id="menu">
+		<img src="/img/ncshs.gif" id="logo" />
+	</div>
+	<div id="form">
+		<h1 id="welcome">Welcome to MyNCSHS!</h1>
+	</div>
+</div>
+
+<div id="login">
+<a href="/students/login" id="no"><img src="/img/teacher_icon.png" id="loginlogo"/></a>
+<h1>Log in as teacher</h1>
+<%= form_tag "/teachers/home" do %>
+	<span class = "logintxt">Teacher ID</span>
+		<%= text_field_tag :search_id%>
+	<p></p>
+	<span id = "logintxt">Password</span>
+		<%= password_field_tag :search_pass%>
+	<br><br>
+	<%= submit_tag :"LOG IN"%>
+						
+<% end %>
+</div>

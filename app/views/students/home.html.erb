@@ -1,0 +1,17 @@
+<span id="name">Logged in as: <%= @student.first_name%> <%=@student.middle_name%> <%=@student.last_name%>, Year <%=@student.year_level%></span>
+<div id="form">	
+	<a href="/students/home" class="menuitem" id="current">HOME</a>
+	<a href="/students/grades" class="menuitem">GRADES</a>
+	<a href="/students/schedule" class="menuitem">SCHEDULE</a>
+	<a href="#" class="menuitem">CLASSMATES</a>
+	<%= link_to "Log Out", session_path("logout"), method: "delete" %>
+	<a href="/students/login"><img src="/img/out.png" id="logout"/></a>
+	<a href="/students/<%= @student.id%>"><img src="/img/profile.png" id="profile"/></a>
+</div>
+
+<p class="title">Announcements</p>
+<% @announcement = Announcement.all %>
+<% @announcement.each do |a|%>
+<p class="headline"><%= a.title %><br><span class="date"><%= a.post_date %></span></p>
+<p><%= a.content %></p>
+<% end %>

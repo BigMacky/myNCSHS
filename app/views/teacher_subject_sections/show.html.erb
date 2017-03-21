@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @teacher_subject_section.license_id %>
+</p>
+
+<p>
+  <strong>Subject title:</strong>
+  <%= @teacher_subject_section.subject_title %>
+</p>
+
+<p>
+  <strong>Section name:</strong>
+  <%= @teacher_subject_section.section_name %>
+</p>
+
+<%= link_to 'Edit', edit_teacher_subject_section_path(@teacher_subject_section) %> |
+<%= link_to 'Back', teacher_subject_sections_path %>

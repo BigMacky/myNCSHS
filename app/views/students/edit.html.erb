@@ -1,0 +1,14 @@
+<div id="form">	
+	<a href="/students/home" class="menuitem" id="current">HOME</a>
+	<a href="/students/grades" class="menuitem">GRADES</a>
+	<a href="#" class="menuitem">SCHEDULE</a>
+	<a href="#" class="menuitem">CLASSMATES</a>
+	<a href="/students/login"><img src="/img/out.png" id="logout"/></a>
+	<a href="#"><img src="/img/profile.png" id="profile"/></a>
+</div>
+<h1>Editing Profile</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @student %> |
+<%= link_to 'Back', students_path %>

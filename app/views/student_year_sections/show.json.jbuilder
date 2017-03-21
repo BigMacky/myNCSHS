@@ -1,0 +1,1 @@
+json.partial! "student_year_sections/student_year_section", student_year_section: @student_year_section

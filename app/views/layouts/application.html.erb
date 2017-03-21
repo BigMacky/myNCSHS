@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyNCSHS</title>
+  <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="shortcut icon" href="/img/ncshs.gif"/>
+  <%= javascript_include_tag 'application.js', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<!-- show this when logged in
+<span id="name">Logged in as: </span>
+-->
+<div id="wrapper">
+	<div id="menu">
+		<img src="/img/ncshs.gif" id="logo" />
+	</div>
+	<div id="content">
+		<%= yield %>
+	</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</html>

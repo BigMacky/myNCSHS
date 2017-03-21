@@ -1,0 +1,60 @@
+<div id="form">
+		<a href="/students/home" class="menuitem">HOME</a>
+		<a href="/students/grades" class="menuitem">GRADES</a>
+		<a href="/students/schedule" class="menuitem">SCHEDULE</a>
+		<a href="#" class="menuitem">CLASSMATES</a>
+		<%= link_to "Log Out", session_path("logout"), method: "delete" %>
+		<a href="#"><img src="/img/out.png" id="logout"/></a>
+		<a href="/students/<%= @student.id%>"><img src="/img/profile.png" id="profile"/></a>
+</div>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+	<strong>Student LRN:</strong>
+	<%= @student.student_lrn %>
+</p>
+
+<p>
+	<strong>First Name:</strong>
+	<%= @student.first_name %>
+</p>
+
+<p>
+	<strong>Middle Name:</strong>
+	<%= @student.middle_name %>
+</p>
+
+<p>
+	<strong>Last Name:</strong>
+	<%= @student.last_name %>
+</p>
+
+<p>
+	<strong>Age:</strong>
+	<%= @student.age %>
+</p>
+
+<p>
+	<strong>Birthdate:</strong>
+	<%= @student.birthdate %>
+</p>
+
+<p>
+	<strong>Religion:</strong>
+	<%= @student.religion %>
+</p>
+
+<p>
+	<strong>Contact Number:</strong>
+	<%= @student.contact_no %>
+</p>
+
+<p>
+	<strong>Year Level:</strong>
+	<%= @student.year_level %>
+</p>
+
+<%= link_to 'Edit Profile', edit_student_path(@student) %>
+<!--<%= link_to 'Back', students_path %> !-->

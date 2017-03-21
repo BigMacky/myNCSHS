@@ -1,0 +1,1 @@
+json.array! @student_grade_subjects, partial: 'student_grade_subjects/student_grade_subject', as: :student_grade_subject

@@ -1,0 +1,68 @@
+<span id="name">Logged in as: <%= @student.first_name%> <%=@student.middle_name%> <%=@student.last_name%>, Year <%=@student.year_level%></span>
+<div id="form">	
+	<a href="/students/home" class="menuitem">HOME</a>
+	<a href="/students/grades" class="menuitem" id="current">GRADES</a>
+	<a href="/students/schedule" class="menuitem">SCHEDULE</a>
+	<a href="#" class="menuitem">CLASSMATES</a>
+		<%= link_to "Log Out", session_path("logout"), method: "delete" %>
+	<a href="/students/login"><img src="/img/out.png" id="logout"/></a>
+	<a href="/students/<%= @student.id%>"><img src="/img/profile.png" id="profile"/></a>
+</div>
+
+
+<p class="title">My Grades</p>
+<h2> First Quarter </h2>
+<% @grades1 = StudentGradeSubject.all.where("student_lrn = ?", @student.student_lrn).where("quarter = ?", 1) %>
+<table>
+	<thead>
+		<tr>
+     	<th>Subject</th>
+     	<th>Grade</th>
+     	</tr>
+	</thead>
+	<tbody>
+	<% @grades1.each do |g| %>
+		<tr>
+		<td><%= g.subject_title%></td>
+		<td><%= g.grade%></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>
+<h2> Second Quarter </h2>
+<% @grades2 = StudentGradeSubject.all.where("student_lrn = ?", @student.student_lrn).where("quarter = ?", 2) %>
+<table>
+	<thead>
+		<tr>
+     	<th>Subject</th>
+     	<th>Grade</th>
+     	</tr>
+	</thead>
+	<tbody>
+	<% @grades2.each do |g| %>
+		<tr>
+		<td><%= g.subject_title%></td>
+		<td><%= g.grade%></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>
+<h2> Third Quarter </h2>
+<% @grades3 = StudentGradeSubject.all.where("student_lrn = ?", @student.student_lrn).where("quarter = ?", 3) %>
+<table>
+	<thead>
+		<tr>
+     	<th>Subject</th>
+     	<th>Grade</th>
+     	</tr>
+	</thead>
+	<tbody>
+	<% @grades3.each do |g| %>
+		<tr>
+		<td><%= g.subject_title%></td>
+		<td><%= g.grade%></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>
+<h1> Fourth Quarter </h1>

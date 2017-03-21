@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Student Grade Subjects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student lrn</th>
+      <th>Subject title</th>
+      <th>Quarter</th>
+      <th>Grade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_grade_subjects.each do |student_grade_subject| %>
+      <tr>
+        <td><%= student_grade_subject.student_lrn %></td>
+        <td><%= student_grade_subject.subject_title %></td>
+        <td><%= student_grade_subject.quarter %></td>
+        <td><%= student_grade_subject.grade %></td>
+        <td><%= link_to 'Show', student_grade_subject %></td>
+        <td><%= link_to 'Edit', edit_student_grade_subject_path(student_grade_subject) %></td>
+        <td><%= link_to 'Destroy', student_grade_subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student grade subject', new_student_grade_subject_path %>

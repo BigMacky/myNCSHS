@@ -1,15 +1,15 @@
-<span id="name">Logged in as: <%= @student.first_name%> <%=@student.middle_name%> <%=@student.last_name%>, Year <%=@student.year_level%></span>
+<span id="name">Logged in as: <%= @student.first_name%> <%=@student.last_name%>, Year <%=@student.year_level%> </span>
+<span id="out"><%=link_to "Log out", session_path("logout"), method: "delete"%></span>
+
 <div id="form">	
 	<a href="/students/home" class="menuitem">HOME</a>
-	<a href="/students/grades" class="menuitem" id="current">GRADES</a>
+	<a href="/students/grades" class="menuitem">GRADES</a>
 	<a href="/students/schedule" class="menuitem">SCHEDULE</a>
-	<a href="#" class="menuitem">CLASSMATES</a>
-		<%= link_to "Log Out", session_path("logout"), method: "delete" %>
-	<a href="/students/login"><img src="/img/out.png" id="logout"/></a>
+	<a href="/students/classmates" class="menuitem">CLASSMATES</a>
+	
+	<!--<a href="/sessions/logout"><img src="/img/out.png" id="logout"/></a>-->
 	<a href="/students/<%= @student.id%>"><img src="/img/profile.png" id="profile"/></a>
 </div>
-
-
 <p class="title">My Grades</p>
 <h2> First Quarter </h2>
 <% @grades1 = StudentGradeSubject.all.where("student_lrn = ?", @student.student_lrn).where("quarter = ?", 1) %>

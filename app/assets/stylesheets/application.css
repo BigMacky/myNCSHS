@@ -63,7 +63,7 @@ img#profile
 	height:auto;
 	margin-top: -1%;
 	position:absolute;
-	margin-left:5px;
+	margin-left:20px;
 }
 
 img#idpic
@@ -139,9 +139,32 @@ span#name
 {
 	position:absolute;
 	float: right;
-	margin-top: -20px;
-	margin-left:800px;
+	margin-top: -100px;
+	margin-left: 140px;
+	background: #bce8fe;
+	padding: 5px 5px 5px 5px;
+	border-radius: 10px;
+	font-weight: bold;
 }
+
+span#out
+{
+	position:absolute;
+	float: right;
+	margin-top: -180px;
+	margin-left: 695px;
+	background: #ceeefe;
+	padding: 5px 5px 5px 5px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+span#out a:hover
+{
+	color: #000;
+	background:none;
+	text-decoration: none;
+}
+
 
 div#footer
 {

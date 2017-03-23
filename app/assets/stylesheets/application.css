@@ -87,7 +87,7 @@ div#content
 {
 	margin-top:5%;
 	background-color: #f9f8f9;
-	background-size: 100%;
+	min-height: 400px;
 	padding: 50px 10px 10px 40px;
 	font-size: 12px;
 }
